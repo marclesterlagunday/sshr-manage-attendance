@@ -1,7 +1,9 @@
 <template>
-    <div>asdasd</div>
+    <Header />
 </template>
 
-<script setup></script>
+<script setup>
+import Header from "@/components/layouts/Header.vue";
+</script>
 
 <style scoped></style>
