@@ -3,3 +3,4 @@ import "./scss/main.scss";
 import App from "./App.vue";
 
 createApp(App).mount("#app");
+console.log();
