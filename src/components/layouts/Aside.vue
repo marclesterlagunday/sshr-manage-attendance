@@ -24,7 +24,28 @@
                 <InputDate label="Date To" />
             </div>
             <div class="filters__options">
-                <h3 class="filters__title">FILTERS</h3>
+                <div class="filters__options-head">
+                    <h3 class="filters__title">FILTERS</h3>
+                    <a href="">Show All</a>
+                </div>
+                <div class="filters__items">
+                    <div class="filters__items-selected">
+                        <img src="/images/icons/buildings.png" alt="" />
+                        <p>SPROUT SOLUTIONS</p>
+                    </div>
+                    <div class="filters__items-selected">
+                        <img src="/images/icons/users.png" alt="" />
+                        <p>ALL</p>
+                    </div>
+                    <div class="filters__items-selected">
+                        <img src="/images/icons/map.png" alt="" />
+                        <p>ALL</p>
+                    </div>
+                    <div class="filters__items-selected">
+                        <img src="/images/icons/single-user.png" alt="" />
+                        <p>ALL</p>
+                    </div>
+                </div>
             </div>
         </div>
     </aside>
@@ -92,6 +113,7 @@ import InputDate from "@/components/forms/InputDate.vue";
 
 .filters {
     padding: 2.4rem;
+    border-bottom: 0.1rem solid #c3cdc9;
 
     &__title {
         font-size: 1.4rem;
@@ -100,6 +122,38 @@ import InputDate from "@/components/forms/InputDate.vue";
         line-height: 1.4rem;
         margin-bottom: 1.8rem;
         letter-spacing: 0.08rem;
+    }
+
+    &__options {
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                margin-bottom: 1.8rem;
+                text-decoration: none;
+                color: #0f6eeb;
+                font-weight: 500;
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    &__items {
+        &-selected {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            p {
+                font-size: 1.4rem;
+                margin: 0;
+            }
+            img {
+                height: 2rem;
+                margin-right: 0.75rem;
+            }
+        }
     }
 }
 </style>
