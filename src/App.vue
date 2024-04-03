@@ -1,9 +1,12 @@
 <template>
     <Header />
-    <Aside />
     <main class="main">
-        <div class="main__header">
-            <span>Date Range</span>
+        <Aside />
+        <div class="container">
+            <div class="main__header">
+                <!-- <p class="date-range">Date Range</p>
+                <p class="date-range">Date Range</p> -->
+            </div>
         </div>
     </main>
 </template>
@@ -15,10 +18,13 @@ import Aside from "./components/layouts/Aside.vue";
 
 <style lang="scss">
 .main {
-    float: right;
+    display: grid;
+    grid-template-columns: 1fr auto;
+
     &__header {
+        width: 100%;
         display: flex;
-        align-items: center;
+        justify-content: start;
     }
 }
 </style>

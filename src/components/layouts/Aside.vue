@@ -73,9 +73,8 @@ import Btn from "@/components/Button.vue";
 <style lang="scss">
 .aside {
     width: 35.4rem;
-    height: auto;
+    min-height: calc(100vh - 7.6rem);
     border-right: 0.1rem solid #879a94;
-    float: left;
 
     &__header {
         padding: 2.4rem 3.2rem;
