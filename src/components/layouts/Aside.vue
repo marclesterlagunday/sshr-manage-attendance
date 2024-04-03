@@ -1,5 +1,6 @@
 <template>
     <aside class="aside">
+        <!-- Header -->
         <div class="aside__header">
             <h3 class="aside__header-title">Manage Attendance</h3>
             <p class="aside__header-description">
@@ -7,6 +8,8 @@
                 export the logs of the employees.
             </p>
         </div>
+
+        <!-- Nav -->
         <div class="aside__nav">
             <button class="aside__nav-btn active" type="button">
                 <i class="fa-regular fa-calendar-days"></i>&nbsp; Attendance
@@ -17,6 +20,7 @@
             </button>
         </div>
 
+        <!-- Filters -->
         <div class="filters">
             <div class="filters__date-range">
                 <h3 class="filters__title">DATE RANGE</h3>
@@ -48,17 +52,28 @@
                 </div>
             </div>
         </div>
+
+        <!-- Action Buttons -->
+        <div class="actions">
+            <Btn type="button" primary>
+                <i class="fa-solid fa-magnifying-glass"></i> Search
+            </Btn>
+            <Btn type="button" secondary>
+                <i class="fa-solid fa-download"></i> Export
+            </Btn>
+        </div>
     </aside>
 </template>
 
 <script setup>
 import InputDate from "@/components/forms/InputDate.vue";
+import Btn from "@/components/Button.vue";
 </script>
 
 <style lang="scss">
 .aside {
     width: 35.4rem;
-    height: calc(100vh - 7.6rem);
+    height: auto;
     border-right: 0.1rem solid #879a94;
 
     &__header {
@@ -155,5 +170,9 @@ import InputDate from "@/components/forms/InputDate.vue";
             }
         }
     }
+}
+
+.actions {
+    padding: 2.4rem;
 }
 </style>
